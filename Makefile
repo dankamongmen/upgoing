@@ -5,7 +5,7 @@
 
 OUT:=out
 CIRCO:=$(addprefix circo/, $(addsuffix .dot, nature phases rational))
-DOT:=$(addprefix dot/, $(addsuffix .dot, central))
+DOT:=$(addprefix dot/, $(addsuffix .dot, central death jumble))
 GRAPHS:=$(addprefix $(OUT)/, $(addsuffix .png, $(CIRCO) $(DOT)))
 
 all: $(GRAPHS)
@@ -19,4 +19,4 @@ $(OUT)/circo/%.png: circo/%
 	circo -Tpng $< > $@
 
 clean:
-	@rm -fv $(GRAPHS)
+	@rm -rfv $(OUT)

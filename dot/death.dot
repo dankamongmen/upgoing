@@ -1,0 +1,45 @@
+digraph G {
+  pack=false
+  len=10
+  node [shape=circle fixedsize=true width=1 height=1 style=filled label="" ]
+    poisonEFF [ image="images/poison.png" ]
+    fairyEFF [ image="images/fairy.png" ]
+    darkEFF [ image="images/dark.png" ]
+    fightingEFF [ image="images/fighting.png" ]
+    rockEFF [ image="images/rock.png" ]
+    groundEFF [ image="images/ground.png" ]
+    electricEFF [ image="images/electric.png" ]
+    flyingEFF [ image="images/flying.png" ]
+    waterEFF [ image="images/water.png" ]
+    grassEFF [ image="images/grass.png" ]
+    fireEFF [ image="images/fire.png" ]
+    bugEFF [ image="images/bug.png" ]
+    { rank=same; fairyEFF darkEFF poisonEFF }
+    { rank=same; fightingEFF rockEFF groundEFF }
+    { rank=same; bugEFF flyingEFF electricEFF }
+    { rank=same; waterEFF grassEFF fireEFF }
+    flyingEFF -> electricEFF [ color=red ]
+    electricEFF -> flyingEFF [ color=green ]
+    groundEFF -> electricEFF [ color=green ]
+    electricEFF -> groundEFF [ color=black ]
+    rockEFF -> fightingEFF [ color=red ]
+    fightingEFF -> rockEFF [ color=green ]
+    fightingEFF -> flyingEFF [ color=red ]
+    flyingEFF -> fightingEFF [ color=green ]
+    fightingEFF -> fairyEFF [ color=red ]
+    fairyEFF -> fightingEFF [ color=green ]
+    fairyEFF -> poisonEFF [ color=red ]
+    poisonEFF -> fairyEFF [ color=green ]
+    fairyEFF -> darkEFF [ color=green ]
+    darkEFF -> fairyEFF [ color=red ]
+    waterEFF -> grassEFF [ color=red ]
+    grassEFF -> waterEFF [ color=green ]
+    flyingEFF -> bugEFF [ color=green ]
+    bugEFF -> flyingEFF [ color=red ]
+    fireEFF -> bugEFF [ color=green ]
+    bugEFF -> fireEFF [ color=red ]
+    fireEFF -> grassEFF [ color=green ]
+    grassEFF -> fireEFF [ color=red ]
+    flyingEFF -> grassEFF [ color=green ]
+    grassEFF -> flyingEFF [ color=red ]
+}
