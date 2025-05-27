@@ -5,9 +5,14 @@
 
 OUT:=out
 CIRCO:=$(addprefix circo/, $(addsuffix .dot, nature phases rational))
-GRAPHS:=$(addprefix $(OUT)/, $(addsuffix .png, $(CIRCO)))
+DOT:=$(addprefix dot/, $(addsuffix .dot, central))
+GRAPHS:=$(addprefix $(OUT)/, $(addsuffix .png, $(CIRCO) $(DOT)))
 
 all: $(GRAPHS)
+
+$(OUT)/dot/%.png: dot/%
+	@mkdir -p $(@D)
+	dot -Tpng $< > $@
 
 $(OUT)/circo/%.png: circo/%
 	@mkdir -p $(@D)
