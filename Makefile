@@ -4,12 +4,12 @@
 .DEFAULT_GOAL:=all
 
 OUT:=out
-DOT:=$(addprefix dot/, $(addsuffix .dot, nature phases rational))
-GRAPHS:=$(addprefix $(OUT)/, $(addsuffix .png, $(DOT)))
+CIRCO:=$(addprefix circo/, $(addsuffix .dot, nature phases rational))
+GRAPHS:=$(addprefix $(OUT)/, $(addsuffix .png, $(CIRCO)))
 
 all: $(GRAPHS)
 
-$(OUT)/dot/%.png: dot/%
+$(OUT)/circo/%.png: circo/%
 	@mkdir -p $(@D)
 	circo -Tpng $< > $@
 
