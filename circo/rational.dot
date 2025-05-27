@@ -1,6 +1,6 @@
 digraph G {
   labelloc=t
-  label="Dark and Psychic are self-ineffective.\nGhost is self-effective.\nPsychic kills Fighting.\nFighting kills Dark.\nDark kills Ghost and Psychic.\n"
+  label="Dark and Psychic are self-ineffective.\nGhost is self-effective.\nPsychic kills Fighting.\nFighting kills Dark.\nDark kills Ghost, and slaughters Psychic.\n"
   node [shape=circle fixedsize=true width=1 height=1 style=filled label="" ]
     normalD [ image="images/normal.png" ]
     ghostD [ image="images/ghost.png" ]

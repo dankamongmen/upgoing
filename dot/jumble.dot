@@ -1,7 +1,6 @@
 digraph G {
-  #overlap=false
-  #splines=true
-  #penwidth=2
+  labelloc=top
+  label="The remaining crapfest."
   node [shape=circle fixedsize=true width=1 height=1 style=filled label="" ]
     normal [ image="images/normal.png" ]
     fighting [ image="images/fighting.png" ]

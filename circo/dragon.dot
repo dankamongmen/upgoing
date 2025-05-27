@@ -1,5 +1,5 @@
 digraph G {
-  label="Dragon is self-effective.\nFairy kills Dragon."
+  label="Dragon is self-effective.\nFairy slaughters Dragon."
   labelloc=top
   labeljust=l
   node [shape=circle fixedsize=true width=1 height=1 style=filled label="" ]
