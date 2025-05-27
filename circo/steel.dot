@@ -1,6 +1,8 @@
 digraph G {
+  label="Steel is self-ineffective.\nFire kills Steel.\nSteel kills Ice, Rock, and Fairy."
+  labelloc=top
+  labeljust=l
   node [shape=circle fixedsize=true width=1 height=1 style=filled label="" ]
-subgraph clusterSteel {
     steelS [ image="images/steel.png" ]
     normalS [ image="images/normal.png" ]
     fightingS [ image="images/fighting.png" ]
@@ -38,25 +40,4 @@ subgraph clusterSteel {
   steelS -> iceS [ color=green ]
   iceS -> steelS [ color=red ]
   steelS -> steelS [ color=red ]
-}
-subgraph clusterDragon {
-    fireDr [ image="images/fire.png" ]
-    fairyDr [ image="images/fairy.png" ]
-    dragonDr [ image="images/dragon.png" ]
-    fightingDr [ image="images/fighting.png" ]
-    grassDr [ image="images/grass.png" ]
-    electricDr [ image="images/electric.png" ]
-    waterDr [ image="images/water.png" ]
-    iceDr [ image="images/ice.png" ]
-  dragonDr -> dragonDr [ color=green ]
-  dragonDr -> fairyDr [ color=black ]
-  fairyDr -> dragonDr [ color=green ]
-  fightingDr -> dragonDr [ color=red ]
-  fireDr -> dragonDr [ color=red ]
-  waterDr -> dragonDr [ color=red ]
-  grassDr -> dragonDr [ color=red ]
-  electricDr -> dragonDr [ color=red ]
-  iceDr -> dragonDr [ color=green ]
-}
-
 }

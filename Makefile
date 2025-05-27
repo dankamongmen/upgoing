@@ -4,8 +4,8 @@
 .DEFAULT_GOAL:=all
 
 OUT:=out
-CIRCO:=$(addprefix circo/, $(addsuffix .dot, nature phases rational))
-DOT:=$(addprefix dot/, $(addsuffix .dot, central death jumble))
+CIRCO:=$(addprefix circo/, $(addsuffix .dot, dragon nature phases rational steel))
+DOT:=$(addprefix dot/, $(addsuffix .dot, death jumble))
 GRAPHS:=$(addprefix $(OUT)/, $(addsuffix .png, $(CIRCO) $(DOT)))
 
 all: $(GRAPHS)
